@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-   resources :users, only: [:new, :create]
+  get 'static_pages/home'
+
+  get 'static_pages/about'
+
+   resources :users, only: [:new, :create, :show]
 
 
 
@@ -8,7 +12,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'application#hello'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
