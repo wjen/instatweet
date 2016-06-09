@@ -2,13 +2,11 @@
 <div>
 <aside>
 <h1>
-  <%= gravatar_for @user %>
-  <%= @user.handle %>
-  <%= @user.email %>
+  <%= gravatar_for @user, size: 150; %><br>
+  <%= @user.handle %><br>
 </h1>
+<h2> <%= @user.email %> </h2>
 <h3> About Me </h3>
-<p>
-  <%= @user.statement %>
-</p>
+<p> <%= @user.statement %> </p>
 </aside>
 </div>

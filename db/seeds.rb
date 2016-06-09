@@ -4,18 +4,19 @@ Tweet.delete_all
 User.create!(handle: "Example User",
              email: "example111@gmail.com",
              password: "foobar",
-             password_confirmation: "foobar"
-             )
+             password_confirmation: "foobar",
+             admin: true)
 # ! raises an exception
-5.times do |n|
-  handle = Faker::Name.handle
+20.times do |n|
+  handle = Faker::Name.name
   email = "example-#{n+1}@gmail.com"
   password = "password"
- User.create!(name: handle,
+ User.create!(handle: handle,
              email: email,
              password: password,
              password_confirmation: password
              )
+end
 # user = User.new(email: "wjen85@gmail.com",
 #                 password: "123456",
 #                 password_confirmation: "123456"

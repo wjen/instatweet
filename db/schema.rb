@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607231108) do
+ActiveRecord::Schema.define(version: 20160609195048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,9 +58,12 @@ ActiveRecord::Schema.define(version: 20160607231108) do
     t.string   "handle"
     t.string   "profile_url"
     t.text     "statement"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "admin",           default: false
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "comments", "tweets"
   add_foreign_key "comments", "users"
