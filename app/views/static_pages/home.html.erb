@@ -1,4 +1,20 @@
+<% if logged_in? %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="user-info">
+        <%= render 'shared/user_info' %>
+      </div>
+      <div class="tweet_form">
+        <%= render 'shared/tweet_form' %>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h3>Tweets Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
 
+<% else %>
 <div class="center jumbotron" id='bgmain'>
   <h1 class="homepage">Welcome to InstaTweet</h1>
   <h2 class="homepage">
@@ -10,3 +26,5 @@
   </p>
 
 </div>
+
+<% end %>

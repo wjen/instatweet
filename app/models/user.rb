@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
   has_many :comments
   before_save :set_handle
 
+  def feed
+    Tweet.where("user_id = ?", id)
+  end
 
   private
 

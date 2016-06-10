@@ -14,9 +14,30 @@
  *= require_self
  *= require_tree .
  */
+#logo {
+  font-color: white;
+  width: 100px;
+  height: 100px;
+}
 
+span {
+  margin-bottom: 10px;
+}
+ .user {
+  text: red;
+ }
+.textarea{
+  font-size: 15pt;
+}
 
-#prof_h1{
+.field {
+  margin-bottom: 10px;
+}
+
+#error-explanation {
+  color: red;
+}
+.profile{
   text-align: left;
 }
  .tweets {
@@ -41,11 +62,7 @@
     }
  }
 
-#logo {
-  font-color: white;
-  width: 50px;
-  height: 50px;
-}
+
 *{
   // border: 10px red solid;
 }

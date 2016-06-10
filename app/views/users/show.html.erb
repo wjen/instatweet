@@ -1,25 +1,24 @@
 <% provide(:title, @user.handle) %>
 <div class="row">
-  <aside class="col-md-5 ">
+  <aside class="col-md-4 ">
     <section class="user_info">
-      <h2>
       <%= gravatar_for @user, size: 120; %>
+      <h1 class="profile">
       <%= @user.handle %>
-      </h2>
+      </h1>
     </section>
     <% if logged_in? %>
       <%= form_for(@tweet) do |f| %>
         <div class="field">
-      <%= f.text_area :content %>
+      <%= f.text_area :content, placeholder: "Tweet away", rows: 10, class: "form-control textarea" %>
         </div>
       <%= f.submit "Post", class: "btn btn-primary" %>
       <% end %>
     <% end %>
-
       <h5> About Me </h5>
       <p> <%= @user.statement %> </p>
   </aside>
-  <div class="col-md-5">
+  <div class="col-md-8">
   <% if @user.tweets.any? %>
     <h3>Tweets (<%= @user.tweets.count %>)</h3>
     <%= will_paginate @tweets %>
