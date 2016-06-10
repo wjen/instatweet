@@ -15,6 +15,19 @@
  *= require_tree .
  */
 
+
+#prof_h1{
+  text-align: left;
+}
+ .tweets {
+  margin-bottom: 10px;
+ }
+
+  .footer{
+    border-top: 1px solid gray;
+    clear: both;
+  }
+
   .text {
     font-size: 20px;
     font-color: red;
@@ -36,8 +49,7 @@
 *{
   // border: 10px red solid;
 }
- @import "bootstrap-sprockets";
- @import "bootstrap";
+
 
 #bgmain {
 
@@ -63,3 +75,6 @@
 h1,h2,{
   text-align: center;
 }
+
+@import "bootstrap-sprockets";
+@import "bootstrap";

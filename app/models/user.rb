@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  attr_accessor :remember_token
   has_secure_password
   validates :password, length: { minimum: 6}, allow_blank: true
   before_save { self.email = email.downcase }
@@ -9,7 +8,7 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX }
 
 
-  has_many :tweets
+  has_many :tweets, dependent: :destroy
   has_many :comments
   before_save :set_handle
 

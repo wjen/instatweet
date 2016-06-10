@@ -17,6 +17,12 @@ User.create!(handle: "Example User",
              password_confirmation: password
              )
 end
+
+users = User.order(:created_at).take(6)
+30.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.tweets.create!(content: content) }
+  end
 # user = User.new(email: "wjen85@gmail.com",
 #                 password: "123456",
 #                 password_confirmation: "123456"

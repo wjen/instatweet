@@ -1,12 +1,31 @@
 <% provide(:title, @user.handle) %>
-<div>
-<aside>
-<h1>
-  <%= gravatar_for @user, size: 150; %><br>
-  <%= @user.handle %><br>
-</h1>
-<h2> <%= @user.email %> </h2>
-<h3> About Me </h3>
-<p> <%= @user.statement %> </p>
-</aside>
-</div>
+<div class="row">
+  <aside class="col-md-5 ">
+    <section class="user_info">
+      <h2>
+      <%= gravatar_for @user, size: 120; %>
+      <%= @user.handle %>
+      </h2>
+    </section>
+    <% if logged_in? %>
+      <%= form_for(@tweet) do |f| %>
+        <div class="field">
+      <%= f.text_area :content %>
+        </div>
+      <%= f.submit "Post", class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+
+      <h5> About Me </h5>
+      <p> <%= @user.statement %> </p>
+  </aside>
+  <div class="col-md-5">
+  <% if @user.tweets.any? %>
+    <h3>Tweets (<%= @user.tweets.count %>)</h3>
+    <%= will_paginate @tweets %>
+    <ol class="tweets">
+      <%= render @tweets %>
+    </ol>
+    <%= page_entries_info @tweets %>
+  <% end %>
+  </div>
