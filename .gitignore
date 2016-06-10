@@ -13,5 +13,5 @@
 /tmp
 .env
 
-# Ignore uploaded test images.
-/public/uploads
+# # Ignore uploaded test images.
+# /public/uploads
