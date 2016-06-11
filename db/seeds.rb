@@ -1,5 +1,5 @@
-User.delete_all
 Tweet.delete_all
+User.delete_all
 
 User.create!(handle: "Example User",
              email: "example111@gmail.com",
