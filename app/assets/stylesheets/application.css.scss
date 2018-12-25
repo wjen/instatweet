@@ -65,7 +65,7 @@ span {
 
 
 #bgmain {
-  background-image: url('images/blue_birds_on_white.gif');
+  background: url("./images/blue_birds_on_white.gif") repeat;
   text-align: center;
   height: 400px;
 }
@@ -78,7 +78,6 @@ span {
 
 #body {
   display: block;
-  margin-top: 150px;
 }
 
 .homepage {
