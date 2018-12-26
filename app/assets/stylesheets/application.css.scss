@@ -13,19 +13,34 @@
  *= require rails_bootstrap_forms
  *= require_self
  *= require_tree .
- */
+*/
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.body {
+  max-width: 1000px;
+}
 
 .logo {
   padding: 10px;
   font-size: 20px;
 }
 
+.nav_container {
+  padding-top: 10px;
+  margin: auto
+}
+
 span {
   margin-bottom: 10px;
 }
- .user {
-  text: red;
- }
+.user {
+text: red;
+}
 .textarea{
   font-size: 15pt;
 }
@@ -44,25 +59,23 @@ span {
   margin-bottom: 10px;
  }
 
-  .footer{
-    border-top: 1px solid gray;
-    clear: both;
+.footer{
+  border-top: 1px solid gray;
+  clear: both;
+}
+
+.text {
+  font-size: 20px;
+  font-color: red;
+}
+
+.users {
+list-style: none;
+  li {
+    padding: 10px;
+    border-bottom: 1px solid gray;
   }
-
-  .text {
-    font-size: 20px;
-    font-color: red;
-  }
-
- .users {
-  list-style: none;
-    li {
-      padding: 10px;
-      border-bottom: 1px solid gray;
-    }
- }
-
-
+}
 
 #bgmain {
   background: url("http://www.zingerbug.com/Backgrounds/background_images/blue_birds_on_white.gif");
