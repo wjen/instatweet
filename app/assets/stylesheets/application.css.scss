@@ -100,5 +100,10 @@ h1,h2,{
   text-align: center;
 }
 
+.submit-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
